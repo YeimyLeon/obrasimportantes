@@ -1,24 +1,30 @@
 header {
-    background-color:#cccfff;
-}
-main {
     background-color: #fcebbe;
 }
 footer {
     background-color: #754c00;
+    color:white;
+    text-align: center;
+}
+main {
+    background-color: #cccfff;
+}
+h1 {
+    background-color: rgb(255, 255, 255);
 }
 h2 {
     background-color: #666666;
 }
-p {
-    background-color:#f6fe00;
-}
 div {
     background-color: #8cc63f;
 }
-article {
-    border:#f79300; 
-}
 section {
-    border:#009200; 
+   
+    display:flex;
+}
+p {
+    background-color: #ffffff;
+}
+article {
+   background-color:#f79300;
 }

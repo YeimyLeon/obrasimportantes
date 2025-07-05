@@ -1,0 +1,92 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Publicidad</title>
+  <link href="publicidad.css" rel="stylesheet" type="text/css">
+  <link href="estilos.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+
+  <nav class="menu-navegacion">
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="acerca.html">Acerca de Nosotros</a></li>
+      <li><a href="fotografia.html">Fotografía</a></li>
+      <li><a href="publicidad.html">Publicidad</a></li>
+      <li><a href="creador.html">Contenido Audiovisual</a></li>
+      <li><a href="contactanos.html">Contáctanos</a></li>
+    </ul>
+  </nav>
+
+  <h2>PUBLICIDAD</h2>
+
+  <div class="contenedor">
+    <div class="producto">
+      <img src="imagen/publicidad1.jpg" alt="Novidade 1" onclick="abrirModalImagen(this.src)">
+      <p>Ambiental</p>
+    </div>
+    <div class="producto">
+      <img src="imagen/publicidad2.jpg" alt="Novidade 2" onclick="abrirModalImagen(this.src)">
+      <p>Feliz Día del Trabajador</p>
+    </div>
+    <div class="producto">
+      <img src="imagen/publicidad3.jpg" alt="Novidade 3" onclick="abrirModalImagen(this.src)">
+      <p>Día Internacional del Hombre</p>
+    </div>
+    <div class="producto">
+      <img src="imagen/publicidad4.jpg" alt="Novidade 4" onclick="abrirModalImagen(this.src)">
+      <p>Día Mundial del Árbol</p>
+    </div>
+    <div class="producto">
+      <img src="imagen/publicidad5.jpg" alt="Novidade 5" onclick="abrirModalImagen(this.src)">
+      <p>Día Mundial del Medio Ambiente</p>
+    </div>
+    <div class="producto">
+      <img src="imagen/publicidad6.jpg" alt="Novidade 6" onclick="abrirModalImagen(this.src)">
+      <p>Imposición de Ceniza</p>
+    </div>
+    <div class="producto">
+      <img src="imagen/publicidad7.jpg" alt="Novidade 7" onclick="abrirModalImagen(this.src)">
+      <p>Aprende a Dibujar a Gabo</p>
+    </div>
+    <div class="producto">
+      <img src="imagen/publicidad8.jpg" alt="Novidade 8" onclick="abrirModalImagen(this.src)">
+      <p>Ambiental</p>
+    </div>
+    <div class="producto">
+      <img src="imagen/publicidad9.jpg" alt="Novidade 9" onclick="abrirModalImagen(this.src)">
+      <p>Propuesta Mariposas</p>
+    </div>
+    <div class="producto">
+      <img src="imagen/publicidad10.jpg" alt="Novidade 10" onclick="abrirModalImagen(this.src)">
+      <p>Informativo</p>
+    </div>
+  </div>
+
+  <div id="modal-imagen" class="modal-imagen" onclick="cerrarModalImagen()">
+    <div class="modal-contenido" onclick="event.stopPropagation()">
+      <span class="cerrar" onclick="cerrarModalImagen()">&times;</span>
+      <img id="imagen-grande" src="" alt="Imagen grande">
+    </div>
+  </div>
+
+  <script>
+    function abrirModalImagen(src) {
+      const modal = document.getElementById('modal-imagen');
+      const imagen = document.getElementById('imagen-grande');
+      imagen.src = src;
+      modal.style.display = 'flex';
+    }
+
+    function cerrarModalImagen() {
+      const modal = document.getElementById('modal-imagen');
+      const imagen = document.getElementById('imagen-grande');
+      imagen.src = '';
+      modal.style.display = 'none';
+    }
+  </script>
+
+</body>
+</html>

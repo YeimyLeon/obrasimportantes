@@ -1,0 +1,112 @@
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fotografía</title>
+  <link href="fotografia.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <nav class="menu-navegacion">
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="acerca.html">Acerca de Nosotros</a></li>
+      <li><a href="fotografia.html">Fotografía</a></li>
+      <li><a href="publicidad.html">Publicidad</a></li>
+      <li><a href="creador.html">Contenido Audiovisual</a></li>
+      <li><a href="contactanos.html">Contáctanos</a></li>
+    </ul>
+  </nav>
+
+  <h2>Sesiones Fotográficas</h2>
+
+  <div class="contenedor">
+
+    <div class="producto" onclick="abrirModal('fotogra1.JPG')">
+      <img src="fotogra1.jpg" alt="Sesión Fotográfica de Bodas" />
+      <div class="descripcion">
+        <p><strong>Nombre:</strong> Sesión Fotográfica de Bodas</p>
+        <p><strong>Fecha:</strong> 15/01/2025</p>
+        <p><strong>Cliente: </strong>Zoraida Barrios </p>
+      </div>
+    </div>
+
+    <div class="producto" onclick="abrirModal('fotogra2.JPG')">
+      <img src="fotogra2.jpg" alt="Sesión Fotográfica de Bodas" />
+      <div class="descripcion">
+        <p><strong>Nombre:</strong> Sesión Fotográfica de Bodas </p>
+        <p><strong>Fecha:</strong> 15/01/2025</p>
+        <p><strong>Cliente:</strong> Zoraida Barrios</p>
+      </div>
+    </div>
+
+    <div class="producto" onclick="abrirModal('fotogra3.JPG')">
+      <img src="fotogra3.jpg" alt="Sesión Fotográfica para Grupos Musicales" />
+      <div class="descripcion">
+        <p><strong>Nombre:</strong> Grupos Musicales</p>
+        <p><strong>Fecha:</strong> 03/06/2023</p>
+        <p><strong>Cliente:</strong> Grupo Músical Taitachaski </p>
+      </div>
+    </div>
+
+    <div class="producto" onclick="abrirModal('fotogra4.JPG')">
+      <img src="fotogra4.jpg" alt="Sesión Fotográfica Infantil" />
+      <div class="descripcion">
+        <p><strong>Nombre:</strong> Sesión Infantil</p>
+        <p><strong>Fecha:</strong> 10/07/2022</p>
+        <p><strong>Cliente:</strong> Paola Camacho</p>
+      </div>
+    </div>
+
+    <div class="producto" onclick="abrirModal('fotogra5.JPG')">
+      <img src="fotogra5.jpg" alt="Sesión Fotográfica Maternidad" />
+      <div class="descripcion">
+        <p><strong>Nombre:</strong> Sesión de Maternidad</p>
+        <p><strong>Fecha:</strong> 21/04/2024</p>
+        <p><strong>Cliente:</strong> Sergio Molano</p>
+      </div>
+    </div>
+
+    <div class="producto" onclick="abrirModal('fotogra6.JPG')">
+      <img src="fotogra6.jpg" alt="Sesión Fotográfica Maternidad" />
+      <div class="descripcion">
+        <p><strong>Nombre:</strong> Sesión de Maternidad</p>
+        <p><strong>Fecha:</strong>  21/04/2024</p>
+        <p><strong>Cliente:</strong> Sergio Molano</p>
+      </div>
+    </div>
+
+    <div class="producto" onclick="abrirModal('fotogra7.JPG')">
+      <img src="fotogra7.jpg" alt="Sesión Fotográfica Maternidad" />
+      <div class="descripcion">
+        <p><strong>Nombre:</strong> Sesión de Maternidad</p>
+        <p><strong>Fecha:</strong> 21/04/2024</p>
+        <p><strong>Cliente:</strong>  Sergio Molano</p>
+      </div>
+    </div>
+
+  </div>
+
+  <div id="modal" class="modal" onclick="cerrarModal(event)">
+    <span class="cerrar" onclick="cerrarModal(event)">&times;</span>
+    <img id="imgModal" class="modal-contenido" src="" alt="Imagen ampliada" />
+  </div>
+
+  <script>
+    function abrirModal(src) {
+      const modal = document.getElementById('modal');
+      const imgModal = document.getElementById('imgModal');
+      imgModal.src = src;
+      modal.style.display = 'flex';
+    }
+
+    function cerrarModal(event) {
+      if(event.target.id === 'imgModal') return;
+      const modal = document.getElementById('modal');
+      modal.style.display = 'none';
+      const imgModal = document.getElementById('imgModal');
+      imgModal.src = '';
+    }
+  </script>
+</body>
+</html>
